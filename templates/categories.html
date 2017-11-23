@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="taxonomies">
+        <div class="taxonomies__title">
+            {{ categories | length }} categories in total
+        </div>
+        <div class="taxonomies__items">
+            {% for category in categories %}
+                <a href="{{ get_taxonomy_url(kind="category", name=category.name) }}">
+                    {{ category.name }}
+                    <span class="count">{{ category.pages | length }}</span>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

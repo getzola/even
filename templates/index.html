@@ -1,0 +1,75 @@
+{% import "post_macros.html" as post_macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+      {% if config.generate_rss %}
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
+      {% endif %}
+
+      {% block css %}
+          <link rel="stylesheet" href="{{ get_url(path="site.css") }}">
+      {% endblock css %}
+
+      {% block extra_head %}
+      {% endblock extra_head %}
+    </head>
+
+    <body>
+        <div class="container">
+            <header id="header">
+                <div class="logo"><a href="{{ config.base_url }}">{{ config.extra.even_title }}</a></div>
+                <nav class="menu">
+                    <ul>
+                        {% for item in config.extra.even_menu %}
+                            <li>
+                                <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                                    {{ item.name }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content">
+                    {% block content %}
+                        <div class="posts">
+                            {% for page in paginator.pages %}
+                                <article class="post">
+                                    {{ post_macros::title(page=page) }}
+                                    <div class="post__summary">
+                                        {{ page.summary | safe }}
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="{{ page.permalink }}">Read more...</a>
+                                    </div>
+                                </article>
+                            {% endfor %}
+                        </div>
+                        <nav class="pagination">
+                            {% if paginator.previous %}
+                                <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
+                            {% endif %}
+                            {% if paginator.next %}
+                                <a class="next" href="{{ paginator.next }}">Next ›</a>
+                            {% endif %}
+                        </nav>
+                    {% endblock content %}
+                </div>
+            </main>
+            {% block footer %}
+            {% endblock footer %}
+        </div>
+    </body>
+
+</html>

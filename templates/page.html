@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% import "post_macros.html" as post_macros %}
+
+{% block content %}
+
+<article>
+    {{ post_macros::title(page=page) }}
+    <div>
+      {{ page.content | safe }}
+    </div>
+
+    {% block page_before_footer %}
+    {% endblock page_before_footer %}
+
+    <div class="post-footer">
+        {% block page_footer %}
+            {% if page.tags %}
+                <div class="post-tags">
+                    {% for tag in page.tags %}
+                        <a href="{{ get_taxonomy_url(kind="tag", name=tag) }}">#{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if page.next or page.previous %}
+                <div class="post-nav">
+                    {% if page.previous %}
+                        <a class="previous" href="{{ page.previous.permalink }}">‹ {{ page.previous.title }}</a>
+                    {% endif %}
+                    {% if page.next %}
+                        <a class="next" href="{{ page.next.permalink }}">{{ page.next.title }} ›</a>
+                    {% endif %}
+                </div>
+            {% endif %}
+
+        {% endblock page_footer %}
+    </div>
+</article>
+
+{% endblock content %}
+

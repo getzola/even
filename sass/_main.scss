@@ -1,0 +1,169 @@
+main {
+  clear: both;
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .posts {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .read-more a {
+    font-size: 1.1rem;
+    color: $main-colour;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .post {
+    padding: 1.5rem 0;
+
+    &__title {
+      margin: 0;
+      font-size: 27px;
+      font-weight: 400;
+
+      @include underline-from-center;
+    }
+
+    &__category {
+      display: inline;
+
+      a {
+        color: inherit;
+
+        &:before {
+          content: "\B7";
+          padding-right: 2px;
+        }
+
+        &:hover {
+          color: $main-colour;
+        }
+      }
+    }
+
+    &__meta {
+      font-size: 14px;
+      color: #8a8a8a;
+    }
+
+    &__summary {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .post-footer {
+    margin-top: 20px;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .post-tags {
+    padding: 15px 0;
+
+    a {
+      margin-right: 5px;
+      color: $main-colour;
+      word-break: break-all;
+    }
+  }
+
+  .post-nav {
+    margin: 1rem 0;
+  }
+
+  .post + .post {
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .pagination {
+    margin: 2rem 0;
+    clear: both;
+  }
+}
+
+.next, .previous {
+  font-weight: 600;
+  font-size: 20px;
+  transition: transform 0.3s ease-out;
+
+  &:hover {
+    color: $main-colour;
+  }
+}
+
+.next {
+  float: right;
+  &:hover {
+    transform: translateX(4px);
+  }
+}
+
+.previous {
+  float: left;
+  &:hover {
+    transform: translateX(-4px);
+  }
+}
+
+.taxonomies {
+  margin: 2em 0 3em;
+  text-align: center;
+
+  &__title {
+    display: inline-block;
+    font-size: 18px;
+    color: $main-colour;
+    border-bottom: 2px solid $main-colour;
+  }
+
+  &__items {
+    margin: 10px 0;
+
+    a {
+      margin: 5px 10px;
+      word-wrap: break-word;
+      position: relative;
+
+      &:hover {
+        color: $main-colour;
+      }
+
+      .count {
+        position: relative;
+        top: -8px;
+        right: -2px;
+        color: $main-colour;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.taxonomy {
+  margin: 2em 0;
+
+  &__item {
+    padding: 3px 20px;
+    border-left: 1px solid #cacaca;
+    transition: 0.2s ease-out;
+
+    &:hover {
+      border-left: 3px solid $main-colour;
+      transform: translateX(4px);
+    }
+
+    &__time {
+      margin-right: 10px;
+      color: #8a8a8a;
+    }
+
+    &__title a {
+      color: $main-colour;
+    }
+  }
+}

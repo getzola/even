@@ -1,0 +1,18 @@
+@import "normalize";
+
+$theme-color-map: (
+  'Default': #c05b4d #f8f5ec,
+  'Mint Green': #16982B #f5f5f5,
+  'Cobalt Blue': #0047AB #f0f2f5,
+  'Hot Pink': #FF69B4 #f8f5f5,
+  'Dark Violet': #9932CC #f5f4fa
+);
+
+// TODO: allow to change that
+$main-colour: #c05b4d;
+
+@import "animations";
+
+@import "base";
+@import "header";
+@import "main";
