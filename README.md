@@ -25,21 +25,21 @@ theme = "even"
 ## Options
 
 ### Top-menu
-Set a field in `extra` with a key of `after_dark_menu`:
+Set a field in `extra` with a key of `even_menu`:
 
 ```toml
-after_dark_menu = [
+even_menu = [
     {url = "$BASE_URL", name = "Home"},
     {url = "$BASE_URL/categories", name = "Categories"},
     {url = "$BASE_URL/tags", name = "Tags"},
-    {url = "https://google.com", name = "Google"},
+    {url = "$BASE_URL/about", name = "About"},
 ]
 ```
 
 If you put `$BASE_URL` in a url, it will automatically be replaced by the actual
 site URL.
 
-### Logo
+### Title
 The site title is shown on the header. As it might be different from the `<title>`
 element that the `title` field in the config represents, you can set the `even_title`
 instead.
