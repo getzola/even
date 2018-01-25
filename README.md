@@ -29,6 +29,7 @@ theme = "even"
 Set a field in `extra` with a key of `even_menu`:
 
 ```toml
+# This is the default menu
 even_menu = [
     {url = "$BASE_URL", name = "Home"},
     {url = "$BASE_URL/categories", name = "Categories"},
