@@ -10,9 +10,26 @@ $theme-color-map: (
 
 // TODO: allow to change that
 $main-colour: #c05b4d;
+$secondary-colour: #f8f5ec;
+$body-width: 800px;
+$mobile-navbar-height: 50px !default;
+
+@mixin min-screen($min-width: $body-width) {
+   @media screen and (min-width: $min-width) {
+     @content;
+   }
+}
+
+@mixin max-screen($max-width: $body-width) {
+   @media screen and (max-width: $max-width) {
+     @content;
+   }
+}
 
 @import "animations";
 
 @import "base";
 @import "header";
 @import "main";
+@import "mobile";
+@import "slideout";

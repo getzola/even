@@ -15,6 +15,10 @@
         <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
       {% endif %}
 
+      {% block js %}
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+      {% endblock js %}
+
       {% block css %}
           <link rel="stylesheet" href="{{ get_url(path="site.css") }}">
       {% endblock css %}
@@ -25,6 +29,30 @@
 
     <body>
         <div class="container">
+
+            <div id="mobile-navbar" class="mobile-navbar">
+              <div class="mobile-header-logo">
+                <a href="/example-site/" class="logo">{{ config.extra.even_title }}</a>
+              </div>
+              <div class="mobile-navbar-icon icon-out">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                {% for item in config.extra.even_menu %}
+                    <li class="mobile-menu-item">
+                        <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                            {{ item.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+              </ul>
+            </nav>
+
             <header id="header">
                 <div class="logo"><a href="{{ config.base_url }}">{{ config.extra.even_title }}</a></div>
                 <nav class="menu">
@@ -41,7 +69,7 @@
             </header>
 
             <main>
-                <div class="content">
+                <div class="content" id="mobile-panel">
                     {% block content %}
                         <div class="posts">
                             {% for page in paginator.pages %}
@@ -71,6 +99,10 @@
             {% block footer %}
             {% endblock footer %}
         </div>
+
+      {% block js_body %}
+          <script type="text/javascript" src="{{ get_url(path="even.js") }}" ></script>
+      {% endblock js_body %}
     </body>
 
 </html>
