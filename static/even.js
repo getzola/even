@@ -1,7 +1,7 @@
 function initMobile() {
   var $mobileNav = document.getElementById("mobile-navbar");
   var $mobileNavIcon = document.querySelector(".mobile-navbar-icon");
-  console.log(Slideout);
+
   var slideout = new Slideout({
     "panel": document.getElementById("mobile-panel"),
     "menu": document.getElementById("mobile-menu"),

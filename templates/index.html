@@ -20,7 +20,7 @@
       {% endblock js %}
 
       {% block css %}
-          <link rel="stylesheet" href="{{ get_url(path="site.css") }}">
+          <link rel="stylesheet" href="{{ get_url(path="site.css", trailing_slash=false) }}">
       {% endblock css %}
 
       {% block extra_head %}
@@ -101,7 +101,7 @@
         </div>
 
       {% block js_body %}
-          <script type="text/javascript" src="{{ get_url(path="even.js") }}" ></script>
+          <script type="text/javascript" src="{{ get_url(path="even.js", trailing_slash=false) }}" ></script>
       {% endblock js_body %}
     </body>
 
