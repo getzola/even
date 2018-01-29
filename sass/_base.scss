@@ -1,5 +1,6 @@
 html {
-  font-size: 16px;
+  font-size: 18px;
+  box-sizing: border-box;
 }
 
 body {
@@ -37,4 +38,27 @@ img {
   height: auto;
   display: inline-block;
   vertical-align: middle;
+}
+
+pre {
+  display: block;
+  padding: 1rem;
+}
+
+pre, code {
+  font-size: 90%;
+  overflow: auto;
+  font-family: $code-font-family;
+  margin-bottom: 0;
+}
+
+pre > code {
+  display: block;
+  border: none;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+iframe {
+  border: 0;
 }
