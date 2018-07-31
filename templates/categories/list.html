@@ -3,11 +3,11 @@
 {% block content %}
     <div class="taxonomies">
         <div class="taxonomies__title">
-            {{ categories | length }} categories in total
+            {{ terms | length }} categories in total
         </div>
         <div class="taxonomies__items">
-            {% for category in categories %}
-                <a href="{{ get_taxonomy_url(kind="category", name=category.name) }}">
+            {% for category in terms %}
+                <a href="{{ category.permalink }}">
                     {{ category.name }}
                     <span class="count">{{ category.pages | length }}</span>
                 </a>

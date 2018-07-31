@@ -23,6 +23,18 @@ and then enable it in your `config.toml`:
 theme = "even"
 ```
 
+The theme requires tags and categories taxonomies to be enabled in your `config.toml`:
+
+```toml
+taxonomies = [
+    # You can enable/disable RSS
+    {name = "categories", rss = true},
+    {name = "tags", rss = true},
+]
+```
+If you want to paginate taxonomies pages, you will need to overwrite the templates
+as it only works for non-paginated taxonomies by default.
+
 ## Options
 
 ### Top-menu
