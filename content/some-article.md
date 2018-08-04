@@ -1,7 +1,9 @@
 +++
 title = "What is Gutenberg"
 date = 2017-09-24
-category = "Hello world"
+
+[taxonomies]
+categories = ["Hello world"]
 +++
 
 Testing every `elements` you can find in [CommonMark](http://commonmark.org).
