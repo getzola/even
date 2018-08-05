@@ -35,6 +35,15 @@ taxonomies = [
 If you want to paginate taxonomies pages, you will need to overwrite the templates
 as it only works for non-paginated taxonomies by default.
 
+It also requires to put the posts in the root of the `content` folder and to enable pagination, for example in `content/_index.md`:
+
+```
++++
+paginate_by = 5
+sort_by = "date"
++++
+```
+
 ## Options
 
 ### Top-menu
