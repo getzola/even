@@ -32,7 +32,7 @@
 <article class="post">
     {{ post_macros::title(page=page) }}
     <div class="post-content">
-        {{ page.content | safe }}
+      {{ page.content | safe }}
     </div>
 
     {% block page_before_footer %}
@@ -40,26 +40,27 @@
 
     <div class="post-footer">
         {% block page_footer %}
-        {% if page.tags %}
-        <div class="post-tags">
-            {% for tag in page.tags %}
-            <a href="{{ get_taxonomy_url(kind="tag", name=tag) }}">#{{ tag }}</a>
-            {% endfor %}
-        </div>
-        {% endif %}
-        {% if page.next or page.previous %}
-        <div class="post-nav">
-            {% if page.previous %}
-            <a class="previous" href="{{ page.previous.permalink }}">‹ {{ page.previous.title }}</a>
+            {% if page.tags %}
+                <div class="post-tags">
+                    {% for tag in page.tags %}
+                        <a href="{{ get_taxonomy_url(kind="tag", name=tag) }}">#{{ tag }}</a>
+                    {% endfor %}
+                </div>
             {% endif %}
-            {% if page.next %}
-            <a class="next" href="{{ page.next.permalink }}">{{ page.next.title }} ›</a>
+            {% if page.next or page.previous %}
+                <div class="post-nav">
+                    {% if page.previous %}
+                        <a class="previous" href="{{ page.previous.permalink }}">‹ {{ page.previous.title }}</a>
+                    {% endif %}
+                    {% if page.next %}
+                        <a class="next" href="{{ page.next.permalink }}">{{ page.next.title }} ›</a>
+                    {% endif %}
+                </div>
             {% endif %}
-        </div>
-        {% endif %}
-        
+
         {% endblock page_footer %}
     </div>
 </article>
 
 {% endblock content %}
+

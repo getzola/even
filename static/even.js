@@ -67,7 +67,7 @@ function initToc() {
 }
 
 if (document.readyState === "complete" ||
-  (document.readyState !== "loading" && !document.documentElement.doScroll)
+    (document.readyState !== "loading" && !document.documentElement.doScroll)
 ) {
   initMobile();
   initToc();
