@@ -30,11 +30,48 @@ function initMobile() {
     slideout.isOpen() && $mobileNavIcon.click();
   })
 }
+function initToc() {
+  var $toclink = document.querySelectorAll('.toc-link')
+  var $headerlink = document.querySelectorAll('.post-content h1 , .post-content h2')
+  var $tocLinkLis = document.querySelectorAll('.post-toc-content li')
+
+  var searchActiveTocIndex = function (array, target) {
+    target += 30
+    for (let i = 0; i < array.length - 1; i++) {
+      if (target > array[i].offsetTop && target <= array[i + 1].offsetTop) return i
+    }
+    if (target > array[array.length - 1].offsetTop) return array.length - 1
+    return -1
+  }
+
+  document.addEventListener("scroll", function() {
+    var scrollTop = document.body.scrollTop | document.documentElement.scrollTop
+    var activeTocIndex = searchActiveTocIndex($headerlink, scrollTop)
+
+    $toclink.forEach(function (el) {
+      el.classList.remove('active')
+    })
+    $tocLinkLis.forEach(function (el) {
+      el.classList.remove('has-active')
+    })
+
+    if (activeTocIndex !== -1) {
+      $toclink[activeTocIndex].classList.add('active')
+      let ancestor = $toclink[activeTocIndex].parentNode
+      while (ancestor.tagName !== 'NAV') {
+        ancestor.classList.add('has-active')
+        ancestor = ancestor.parentNode.parentNode
+      }
+    }
+  })
+}
 
 if (document.readyState === "complete" ||
     (document.readyState !== "loading" && !document.documentElement.doScroll)
 ) {
   initMobile();
+  initToc();
 } else {
   document.addEventListener("DOMContentLoaded", initMobile);
+  document.addEventListener("DOMContentLoaded", initToc);
 }
