@@ -4,6 +4,8 @@ weight = 1
 order = 1
 date = 2018-07-18
 insert_anchor_links = "right"
+[taxonomies]
+categories = ["Real Content"]
 +++
 
 Testing every `elements` you can find in [CommonMark](http://commonmark.org).
@@ -60,7 +62,7 @@ fn main() {
 
 ## An image
 
-![a cat](https://i.imgur.com/t6nPdY8.jpg "A cat")
+![a cat](/cat_demo_img.jpg "A cat photo taken by Brendan DeBrincat and used under the Creative Commons license")
 
 ## An iframe
 

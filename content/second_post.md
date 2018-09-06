@@ -1,11 +1,9 @@
 +++
 title = "Second post"
 date = 2018-07-02
-category = "Even"
-tags = [
-  "placeholder posts",
-  "prime-number posts",
-] 
+[taxonomies]
+categories = ["Even"]
+tags = ["placeholder posts", "prime-number posts"]
 +++
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis

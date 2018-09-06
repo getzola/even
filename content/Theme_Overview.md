@@ -1,9 +1,9 @@
 +++
 title = "Theme Overview"
 date = 2018-07-19
-category = "Real content"
-tags = [
-]
+[taxonomies]
+categories = ["Real Content"]
+tags = ["placeholder posts"]
 +++
 This site provides a demo for the Even theme for the 
 [Gutenberg](https://www.getgutenberg.io/) static site generator.  Even was
