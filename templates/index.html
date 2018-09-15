@@ -65,6 +65,14 @@
                             </li>
                         {% endfor %}
                     </ul>
+                    {% if config.extra.even_search %}
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    {% endif %}
                 </nav>
             </header>
 
@@ -102,6 +110,11 @@
 
       {% block js_body %}
           <script type="text/javascript" src="{{ get_url(path="even.js", trailing_slash=false) }}" ></script>
+          {% if config.extra.even_search %}
+          <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js", trailing_slash=false) }}"></script>
+          <script type="text/javascript" src="{{ get_url(path="search_index.en.js", trailing_slash=false) }}"></script>
+          <script type="text/javascript" src="{{ get_url(path="search.js", trailing_slash=false) }}"></script>
+          {% endif %}
       {% endblock js_body %}
     </body>
 
