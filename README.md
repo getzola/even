@@ -1,7 +1,7 @@
 # Even
 Even is a clean, responsive theme based on the Hugo theme with the same name featuring categories, tags and pagination.
 
-![even screenshot](https://github.com/Keats/even/blob/master/screenshot.png?raw=true)
+![even screenshot](https://github.com/getzola/even/blob/master/screenshot.png?raw=true)
 
 ## Contents
 
@@ -15,7 +15,7 @@ First download this theme to your `themes` directory:
 
 ```bash
 $ cd themes
-$ git clone https://github.com/Keats/even.git
+$ git clone https://github.com/getzola/even.git
 ```
 and then enable it in your `config.toml`:
 
