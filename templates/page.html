@@ -40,10 +40,10 @@
 
     <div class="post-footer">
         {% block page_footer %}
-            {% if page.tags %}
+            {% if page.taxonomies %}
                 <div class="post-tags">
-                    {% for tag in page.tags %}
-                        <a href="{{ get_taxonomy_url(kind="tag", name=tag) }}">#{{ tag }}</a>
+                    {% for tag in page.taxonomies["tags"] %}
+                        <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">#{{ tag }}</a>
                     {% endfor %}
                 </div>
             {% endif %}
