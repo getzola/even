@@ -47,13 +47,19 @@
                     {% endfor %}
                 </div>
             {% endif %}
-            {% if page.next or page.previous %}
+            {% if page.earlier or page.later or page.lighter or page.heavier %}
                 <div class="post-nav">
-                    {% if page.previous %}
-                        <a class="previous" href="{{ page.previous.permalink }}">‹ {{ page.previous.title }}</a>
+                    {% if page.earlier %}
+                        <a class="previous" href="{{ page.earlier.permalink }}">‹ {{ page.earlier.title }}</a>
                     {% endif %}
-                    {% if page.next %}
-                        <a class="next" href="{{ page.next.permalink }}">{{ page.next.title }} ›</a>
+                    {% if page.later %}
+                        <a class="next" href="{{ page.later.permalink }}">{{ page.later.title }} ›</a>
+                    {% endif %}
+                    {% if page.lighter %}
+                        <a class="previous" href="{{ page.lighter.permalink }}">‹ {{ page.lighter.title }}</a>
+                    {% endif %}
+                    {% if page.heavier %}
+                        <a class="next" href="{{ page.heavier.permalink }}">{{ page.heavier.title }} ›</a>
                     {% endif %}
                 </div>
             {% endif %}
