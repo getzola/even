@@ -116,6 +116,10 @@ main {
   .post-footer {
     margin-top: 20px;
     border-top: 1px solid #e6e6e6;
+
+    & + div {
+        clear: both;
+    }
   }
 
   .post-tags {
