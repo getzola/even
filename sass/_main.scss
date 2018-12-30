@@ -117,8 +117,12 @@ main {
     margin-top: 20px;
     border-top: 1px solid #e6e6e6;
 
-    & + div {
+    & :after {
         clear: both;
+        height: 0;
+        width: 100%;
+        content: '';
+        display: block;
     }
   }
 
