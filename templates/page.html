@@ -71,6 +71,9 @@
     </div>
 
     {% block page_after_footer %}
+        {% if config.extra.disqus %}
+            {{ post_macros::disqus() }}
+        {% endif %}
     {% endblock page_after_footer %}
 </article>
 
