@@ -11,8 +11,9 @@ main {
   }
 
   .read-more a {
-    font-size: 1.1rem;
     color: $main-colour;
+    font-family: $decoration-font-family;
+    font-size: 1.1rem;
 
     &:hover {
       text-decoration: underline;
@@ -22,6 +23,14 @@ main {
   .about,
   .post {
     padding: 1.5rem 0;
+
+    .post__title {
+      font-family: $decoration-font-family;
+
+      a {
+        color: #34495e;
+      }
+    }
 
     h2, h3, h4, h5, h6 {
       font-weight: 400;
@@ -106,7 +115,7 @@ main {
 
     &__title {
       margin: 0;
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 400;
 
       @include underline-from-center;
@@ -171,8 +180,13 @@ main {
   }
 
   .pagination {
-    margin: 2rem 0;
     clear: both;
+    font-family: $decoration-font-family;
+    margin: 2rem 0;
+
+    a {
+      color: #34495e;
+    }
   }
 }
 
