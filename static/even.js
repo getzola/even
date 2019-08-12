@@ -36,6 +36,10 @@ function initToc() {
   var $tocLinkLis = document.querySelectorAll('.post-toc-content li')
 
   var searchActiveTocIndex = function (array, target) {
+    if (!array.length) {
+      return -1
+    }
+
     target += 30
     for (let i = 0; i < array.length - 1; i++) {
       if (target > array[i].offsetTop && target <= array[i + 1].offsetTop) return i
@@ -55,7 +59,7 @@ function initToc() {
       el.classList.remove('has-active')
     })
 
-    if (activeTocIndex !== -1) {
+    if ($toclink.length && activeTocIndex !== -1) {
       $toclink[activeTocIndex].classList.add('active')
       let ancestor = $toclink[activeTocIndex].parentNode
       while (ancestor.tagName !== 'NAV') {
