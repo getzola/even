@@ -45,7 +45,6 @@ main {
 
     p > a {
       color: $main-colour;
-      word-break: break-all;
 
       &:hover {
         border-bottom: 1px solid $main-colour;
