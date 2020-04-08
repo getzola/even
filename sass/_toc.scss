@@ -3,7 +3,7 @@ $toc-max-sreen-width: 2 * 200px + $post-toc-margin-left !default;
 
 .post-toc {
   position: absolute;
-  width: 200px;
+  min-width: 200px;
   margin-left: $post-toc-margin-left;
   padding: 10px;
   border-radius: 5px;
