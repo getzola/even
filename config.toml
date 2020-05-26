@@ -5,6 +5,7 @@ compile_sass = true
 title = "even theme"
 description = ""
 highlight_code = true
+generate_feed = true
 
 taxonomies = [
     {name = "categories", rss = true},
