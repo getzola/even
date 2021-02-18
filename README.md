@@ -14,8 +14,8 @@ Even is a clean, responsive theme based on the Hugo theme with the same name fea
 First download this theme to your `themes` directory:
 
 ```bash
-$ cd themes
-$ git clone https://github.com/getzola/even.git
+cd themes
+git clone https://github.com/getzola/even.git
 ```
 and then enable it in your `config.toml`:
 
@@ -28,8 +28,8 @@ The theme requires tags and categories taxonomies to be enabled in your `config.
 ```toml
 taxonomies = [
     # You can enable/disable RSS
-    {name = "categories", rss = true},
-    {name = "tags", rss = true},
+    {name = "categories", feed = true},
+    {name = "tags", feed = true},
 ]
 ```
 If you want to paginate taxonomies pages, you will need to overwrite the templates
