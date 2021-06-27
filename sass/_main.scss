@@ -36,7 +36,7 @@ main {
       font-weight: 400;
     }
 
-    code {
+    :not(pre) > code {
       padding: 3px 5px;
       border-radius: 4px;
       color: $code-colour;
