@@ -27,6 +27,17 @@
                   onload="renderMathInElement(document.body);"></script>
               {% endif %}
           {% endif %}
+          {% if config.extra.even_google_analytics is defined %}
+          <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.even_google_analytics }}"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', '{{ config.extra.even_google_analytics }}');
+          </script>
+          {% endif %}
       {% endblock js %}
 
       {% block css %}
