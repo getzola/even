@@ -147,6 +147,22 @@ main {
     }
   }
 
+  .post-content {
+    .youtube-responsive {
+      height: 0;
+      padding-bottom: 56.25%; // 16:9
+      position: relative;
+
+      iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+
   .post-footer {
     margin-top: 20px;
     border-top: 1px solid #e6e6e6;
