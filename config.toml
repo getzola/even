@@ -22,5 +22,7 @@ even_menu = [
     {url = "$BASE_URL/tags", name = "Tags"},
     {url = "$BASE_URL/about", name = "About"},
 ]
+images_default_size = 1000
+images_sizes = [500, 1000, 2000]
 
 even_title = "Even"
