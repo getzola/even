@@ -49,19 +49,13 @@
                     {% endfor %}
                 </div>
             {% endif %}
-            {% if page.earlier or page.later or page.lighter or page.heavier %}
+            {% if page.lower or page.higher %}
                 <div class="post-nav">
-                    {% if page.earlier %}
-                        <a class="previous" href="{{ page.earlier.permalink }}">‹ {{ page.earlier.title }}</a>
+                    {% if page.lower %}
+                        <a class="previous" href="{{ page.lower.permalink }}">‹ {{ page.lower.title }}</a>
                     {% endif %}
-                    {% if page.later %}
-                        <a class="next" href="{{ page.later.permalink }}">{{ page.later.title }} ›</a>
-                    {% endif %}
-                    {% if page.lighter %}
-                        <a class="previous" href="{{ page.lighter.permalink }}">‹ {{ page.lighter.title }}</a>
-                    {% endif %}
-                    {% if page.heavier %}
-                        <a class="next" href="{{ page.heavier.permalink }}">{{ page.heavier.title }} ›</a>
+                    {% if page.higher %}
+                        <a class="next" href="{{ page.higher.permalink }}">{{ page.higher.title }} ›</a>
                     {% endif %}
                 </div>
             {% endif %}
