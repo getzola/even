@@ -3,7 +3,7 @@ description = "A robust, elegant dark theme"
 license = "MIT"
 homepage = "https://github.com/getzola/even"
 min_version = "0.16.0"
-demo = "https://zola-even.netlify.com"
+demo = "https://zola-even.netlify.app"
 
 [extra]
 even_menu = [
