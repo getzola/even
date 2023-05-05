@@ -61,7 +61,3 @@ fn main() {
 ## An image
 
 ![a cat](https://i.imgur.com/t6nPdY8.jpg "A cat")
-
-## An iframe
-
-{{ youtube(id="dQw4w9WgXcQ") }}

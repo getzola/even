@@ -64,7 +64,3 @@ fn main() {
 
 ![a cat](https://placekitten.com/200/300?image=4 "A cat photo taken by Energetic
 Spirit (CC BY-SA 2.0)")
-
-## An iframe
-
-{{ youtube(id="dQw4w9WgXcQ") }}
