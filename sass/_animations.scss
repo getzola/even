@@ -1,3 +1,4 @@
+@use "variables";
 @mixin underline-from-center() {
   display: inline-block;
   vertical-align: middle;
@@ -15,7 +16,7 @@
     bottom: 0;
     left: 51%;
     right: 51%;
-    background: $main-colour;
+    background: variables.$main-colour;
     transition-duration: 0.2s;
     transition-property: right, left;
     transition-timing-function: ease-out;
@@ -104,7 +105,7 @@
     top: calc((100% - 1px) / 2);
     width: 20px;
     height: 1px;
-    background-color: $main-colour;
+    background-color: variables.$main-colour;
 
     &:nth-child(1) {
       transform: translateY(6px) rotate(0deg);

@@ -1,3 +1,5 @@
+@use "variables";
+@use "animations";
 main {
   clear: both;
 
@@ -11,8 +13,8 @@ main {
   }
 
   .read-more a {
-    color: $main-colour;
-    font-family: $decoration-font-family;
+    color: variables.$main-colour;
+    font-family: variables.$decoration-font-family;
     font-size: 1.1rem;
 
     &:hover {
@@ -25,7 +27,7 @@ main {
     padding: 1.5rem 0;
 
     .post__title {
-      font-family: $decoration-font-family;
+      font-family: variables.$decoration-font-family;
 
       a {
         color: #34495e;
@@ -39,15 +41,15 @@ main {
     :not(pre) > code {
       padding: 3px 5px;
       border-radius: 4px;
-      color: $code-colour;
-      background: $secondary-colour;
+      color: variables.$code-colour;
+      background: variables.$secondary-colour;
     }
 
     p > a {
-      color: $main-colour;
+      color: variables.$main-colour;
 
       &:hover {
-        border-bottom: 1px solid $main-colour;
+        border-bottom: 1px solid variables.$main-colour;
       }
     }
 
@@ -73,16 +75,16 @@ main {
       box-shadow: 2px 2px 3px rgba(0, 0, 0, .125);
 
       thead {
-        background: $secondary-colour;
+        background: variables.$secondary-colour;
       }
 
       th, td {
         padding: 5px 15px;
-        border: 1px double darken($secondary-colour, 3%);
+        border: 1px double darken(variables.$secondary-colour, 3%);
       }
 
       tr:hover {
-        background-color: $secondary-colour;
+        background-color: variables.$secondary-colour;
       }
     }
 
@@ -90,7 +92,7 @@ main {
       padding-left: 40px;
 
       &:first-of-type {
-        border-top: 2px dashed $main-colour;
+        border-top: 2px dashed variables.$main-colour;
         margin-top: 1rem;
         padding-top: 1rem;
       }
@@ -117,7 +119,7 @@ main {
       font-size: 26px;
       font-weight: 400;
 
-      @include underline-from-center;
+      @include animations.underline-from-center;
     }
 
     &__category {
@@ -132,14 +134,14 @@ main {
         }
 
         &:hover {
-          color: $main-colour;
+          color: variables.$main-colour;
         }
       }
     }
 
     &__meta {
       font-size: 14px;
-      color: #8a8a8a;
+      color: #757575;
     }
 
     &__summary {
@@ -165,7 +167,7 @@ main {
 
     a {
       margin-right: 5px;
-      color: $main-colour;
+      color: variables.$main-colour;
       word-break: break-all;
     }
   }
@@ -180,7 +182,7 @@ main {
 
   .pagination {
     clear: both;
-    font-family: $decoration-font-family;
+    font-family: variables.$decoration-font-family;
     margin: 2rem 0;
 
     a {
@@ -195,7 +197,7 @@ main {
   transition: transform 0.3s ease-out;
 
   &:hover {
-    color: $main-colour;
+    color: variables.$main-colour;
   }
 }
 
@@ -220,8 +222,8 @@ main {
   &__title {
     display: inline-block;
     font-size: 18px;
-    color: $main-colour;
-    border-bottom: 2px solid $main-colour;
+    color: variables.$main-colour;
+    border-bottom: 2px solid variables.$main-colour;
   }
 
   &__items {
@@ -233,14 +235,14 @@ main {
       position: relative;
 
       &:hover {
-        color: $main-colour;
+        color: variables.$main-colour;
       }
 
       .count {
         position: relative;
         top: -8px;
         right: -2px;
-        color: $main-colour;
+        color: variables.$main-colour;
         font-size: 12px;
       }
     }
@@ -256,28 +258,28 @@ main {
     transition: 0.2s ease-out;
 
     &:hover {
-      border-left: 3px solid $main-colour;
+      border-left: 3px solid variables.$main-colour;
       transform: translateX(4px);
     }
 
     &__time {
       margin-right: 10px;
-      color: #8a8a8a;
+      color: #757575;
     }
 
     &__title a {
-      color: $main-colour;
+      color: variables.$main-colour;
     }
   }
 }
 
 .about {
   p > a {
-    color: $main-colour;
+    color: variables.$main-colour;
     word-break: break-all;
 
     &:hover {
-      border-bottom: 1px solid $main-colour;
+      border-bottom: 1px solid variables.$main-colour;
     }
   }
 }

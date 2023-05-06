@@ -1,4 +1,5 @@
-$post-toc-margin-left: $body-width - 15px !default;
+@use "variables";
+$post-toc-margin-left: variables.$body-width - 15px !default;
 $toc-max-sreen-width: 2 * 200px + $post-toc-margin-left !default;
 
 .post-toc {
@@ -47,11 +48,11 @@ $toc-max-sreen-width: 2 * 200px + $post-toc-margin-left !default;
     }
 
     .toc-link.active {
-      color: $main-colour;
+      color: variables.$main-colour;
     }
   }
 }
-@include max-screen($toc-max-sreen-width) {
+@include variables.max-screen($toc-max-sreen-width) {
   .post-toc {
     display: none;
   }

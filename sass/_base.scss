@@ -1,3 +1,4 @@
+@use "variables";
 html {
   font-size: 16px;
   box-sizing: border-box;
@@ -7,17 +8,17 @@ body {
   line-height: 1.5;
   color: #34495e;
   background: #fefefe;
-  border-top: 3px solid $main-colour;
+  border-top: 3px solid variables.$main-colour;
   overflow-y: scroll;
 }
 
 .container {
-  width: $body-width;
+  width: variables.$body-width;
   margin: 0 auto;
   padding-bottom: 4rem;
 }
 
-@include max-screen() {
+@include variables.max-screen() {
   body {
     border-top: 0;
   }
@@ -29,7 +30,7 @@ body {
 }
 
 a {
-  color: $main-colour;
+  color: variables.$main-colour;
   text-decoration: none;
 }
 
@@ -48,7 +49,7 @@ pre {
 pre, code {
   font-size: 90%;
   overflow: auto;
-  font-family: $code-font-family;
+  font-family: variables.$code-font-family;
   margin-bottom: 0;
   color: #c9d2dc;
 }
