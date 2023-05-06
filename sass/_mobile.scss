@@ -1,3 +1,5 @@
+@use "variables";
+@use "animations";
 // ==============================
 // Mobile Navbar
 // ==============================
@@ -8,7 +10,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: $mobile-navbar-height;
+  height: variables.$mobile-navbar-height;
   background: white;
   box-shadow: 0px 2px 2px #cacaca;
   text-align: center;
@@ -25,51 +27,51 @@
 
     .logo {
       font-size: 22px;
-      line-height: $mobile-navbar-height;
+      line-height: variables.$mobile-navbar-height;
     }
   }
 
   .mobile-navbar-icon {
     cursor: pointer;
-    color: $main-colour;
-    height: $mobile-navbar-height;
-    width: $mobile-navbar-height;
+    color: variables.$main-colour;
+    height: variables.$mobile-navbar-height;
+    width: variables.$mobile-navbar-height;
     font-size: 24px;
     text-align: center;
     float: left;
     position: relative;
     transition: background 0.5s;
 
-    @include mobile-menu-icon();
+    @include animations.mobile-menu-icon();
   }
 }
 
 .mobile-menu {
-  background-color: rgba($secondary-colour, 0.5);
+  background-color: rgba(variables.$secondary-colour, 0.5);
 
   .mobile-menu-list {
     position: relative;
     list-style: none;
     margin-top: 50px;
     padding: 0;
-    border-top: 1px solid $secondary-colour;
+    border-top: 1px solid variables.$secondary-colour;
 
     .mobile-menu-item {
       padding: 10px 30px;
-      border-bottom: 1px solid $secondary-colour;
+      border-bottom: 1px solid variables.$secondary-colour;
     }
 
     a {
       font-size: 18px;
 
       &:hover {
-        color: $main-colour;
+        color: variables.$main-colour;
       }
     }
   }
 }
 
-@include max-screen() {
+@include variables.max-screen() {
   .mobile-navbar {
     display: block;
   }
