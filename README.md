@@ -94,3 +94,17 @@ block-style automatic rendering is also supported, if enabled in the config:
 katex_enable = true
 katex_auto_render = true
 ```
+
+### Special stylesheet classes
+
+#### Rendering YouTube videos in 16:9
+
+If you want to display an embedded YouTube video in 16:9, add class
+`.youtube-responsive` when using the appropriate shortcode, e.g.:
+
+```
+{{ youtube(id="aqz-KE-bpKQ", class="youtube-responsive") }}
+```
+
+The height of the video will be scaled on different devices
+responsively.
