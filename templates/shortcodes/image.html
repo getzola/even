@@ -1,0 +1,13 @@
+{% set abspath = "./" ~ page.path ~ src  %}
+{% set meta = get_image_metadata(path=abspath) %}
+{% set width = meta.width %}
+{% set srcset_list = [] %}
+{% for s in config.extra.images_sizes %}
+{% if width >= s %}
+{% set resized = resize_image(path=abspath, width=s, op="fit_width") %}
+{% set element = resized.url ~ " " ~ s ~ "w" %}
+{% set_global srcset_list = srcset_list | concat(with=[element]) %}
+{% endif %}
+{% endfor %}
+{% set default_resized = resize_image(path=abspath, width=config.extra.images_default_size, op="fit_width") %}
+<img alt="{{ alt }}" src="{{ default_resized.url | safe }}" srcset="{{ srcset_list | join(sep=", ") | safe }}" />
