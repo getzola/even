@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>even theme - tag1</title>
+    <subtitle>A clean, responsive theme</subtitle>
+    <link href="https://getzola.github.io/even/tags/tag1/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://getzola.github.io/even/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2018-07-01T00:00:00+00:00</updated>
+    <id>https://getzola.github.io/even/tags/tag1/atom.xml</id>
+    <entry xml:lang="en">
+        <title>First post</title>
+        <published>2018-07-01T00:00:00+00:00</published>
+        <updated>2018-07-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://getzola.github.io/even/first-post/" type="text/html"/>
+        <id>https://getzola.github.io/even/first-post/</id>
+        
+        <summary type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+in culpa qui officia deserunt mollit anim id est laborum.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>
