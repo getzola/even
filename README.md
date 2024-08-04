@@ -94,3 +94,22 @@ block-style automatic rendering is also supported, if enabled in the config:
 katex_enable = true
 katex_auto_render = true
 ```
+
+### Responsive Images
+To create images in multiple resolutions you can use replace `![some image](foo)`
+with `{{ image(src="foo.jpeg", alt="some image") }}`. You can configure image
+sizes in "width in pixels":
+
+```toml
+[extra]
+images_default_size = 1000
+images_sizes = [500, 1000, 2000]
+```
+
+The browser will automatically choose an appropriate image size based on the screen
+size and other factors like connectivity. For browser that do not support responsive
+images, `images_default_size` will be used.
+
+Please note that specifying many entries in `images_sizes` will slow down `zola serve`
+and `zola build` considerably. Since one file per size is created, this also potentially
+increases the hosting costs of your website.
