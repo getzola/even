@@ -7,7 +7,7 @@
             <span class="post__time">{{ page.date | date(format="%F") }}</span>
             {% if page.category %}
                 <div class="post__category">
-                    <a href="{{ get_taxonomy_url(kind="category", name=page.category) }}">{{ page.category }}</a>
+                    <a href="{{ get_taxonomy_url(kind="category", name=page.category, lang=lang) }}">{{ page.category }}</a>
                 </div>
             {% endif %}
         </div>
